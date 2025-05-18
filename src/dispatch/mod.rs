@@ -167,7 +167,10 @@ pub async fn dispatch_event<U: Send + Sync, E>(
                 error.handle(framework.options).await;
             }
         }
-        _ => {}
+        _ => {
+            println!("wow");
+            println!("found a thing: {:?}", event};
+        }
     }
 
     // Do this after the framework's Ready handling, so that get_user_data() doesnt
